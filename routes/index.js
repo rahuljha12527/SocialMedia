@@ -8,5 +8,10 @@ const homeController=require('../controllers/home_controller');
 
 console.log('router loaded');
 router.get('/',homeController.home);
-// router.get('/action',homeController.home_action);
+
+ 
+router.use('/users',require('./users'));
+
+// for anty further routes,access from here
+// router.use('/routerName)
 module.exports=router;
